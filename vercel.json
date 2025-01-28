@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python"
+      },
+      {
+        "src": "templates/**/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "static/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/app.py"
+      },
+      {
+        "src": "/chat",
+        "dest": "/app.py"
+      },
+      {
+        "src": "/history",
+        "dest": "/app.py"
+      }
+    ]
+  }
+  
